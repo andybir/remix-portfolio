@@ -1,31 +1,81 @@
 import {
+  Link,
   Links,
   LiveReload,
   Meta,
   Outlet,
   Scripts,
   ScrollRestoration,
-} from "remix";
+} from 'remix'
+import globalStylesUrl from '~/styles/global.css'
+
+export const links = () => [{ rel: 'stylesheet', href: globalStylesUrl }]
 
 export function meta() {
-  return { title: "New Remix App" };
+  const description = 'Portfolio website for Andy Birosak'
+  const keywords = 'andy birosak, birosak, andy birosak portfolio'
+  const title = 'Andy Birosak Portfolio'
+  return { description, keywords, title }
 }
 
 export default function App() {
   return (
-    <html lang="en">
+    <Document>
+      <Layout>
+        <Outlet />
+      </Layout>
+    </Document>
+  )
+}
+
+function Document({ children, title }) {
+  return (
+    <html lang='en'>
       <head>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <meta charset='UTF-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <Meta />
         <Links />
       </head>
       <body>
-        <Outlet />
-        <ScrollRestoration />
-        <Scripts />
-        <LiveReload />
+        {children}
+        {process.env.NODE_ENV === 'development' && <LiveReload />}
       </body>
     </html>
-  );
+  )
+}
+
+function Layout({ children }) {
+  return (
+    <>
+      <nav className='navbar'>
+      <Link to='/' className='nav-item'>
+          Portfolio
+        </Link><Link to='/' className='nav-item'>
+          Music
+        </Link>
+        <Link to='/' className='logo'>
+          Andy Birosak
+        </Link>
+        <Link to='/' className='nav-item'>
+          About
+        </Link><Link to='/' className='nav-item'>
+          Contact
+        </Link>
+      </nav>
+      <div className='container'>{children}</div>
+    </>
+  )
+}
+
+export function ErrorBoundary({ error }) {
+  console.log(error)
+  return (
+    <Document>
+      <Layout>
+        <h1>Error</h1>
+        <p>{error.message}</p>
+      </Layout>
+    </Document>
+  )
 }
