@@ -32,7 +32,7 @@ function Document({ children, title }) {
   return (
     <html lang='en'>
       <head>
-        <meta charset='UTF-8' />
+        <meta charSet='UTF-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
         <Meta />
         <Links />
@@ -49,17 +49,19 @@ function Layout({ children }) {
   return (
     <>
       <nav className='navbar'>
-      <Link to='/' className='nav-item'>
+        <Link to='/portfolio' className='nav-item'>
           Portfolio
-        </Link><Link to='/' className='nav-item'>
+        </Link>
+        <Link to='/music' className='nav-item'>
           Music
         </Link>
         <Link to='/' className='logo'>
           Andy Birosak
         </Link>
-        <Link to='/' className='nav-item'>
+        <Link to='/about' className='nav-item'>
           About
-        </Link><Link to='/' className='nav-item'>
+        </Link>
+        <Link to='/contact' className='nav-item'>
           Contact
         </Link>
       </nav>
