@@ -16,7 +16,7 @@ function Portfolio() {
         </div>
         <a href='https://thehollowbk.org' rel='noreferrer' target='_blank'>
           <div className='project-img'>
-            <img src={hollow} alt='' srcset='' />
+            <img src={hollow} alt='' />
           </div>
         </a>
       </div>
@@ -31,7 +31,7 @@ function Portfolio() {
         </div>
         <a href='https://birdie-lou.com' rel='noreferrer' target='blank'>
           <div className='project-img'>
-            <img src={birdieLou} alt='' srcset='' />
+            <img src={birdieLou} alt='' />
           </div>
         </a>
       </div>
@@ -50,7 +50,7 @@ function Portfolio() {
           target='blank'
         >
           <div className='project-img'>
-            <img src={andyshop} alt='' srcset='' />
+            <img src={andyshop} alt='' />
           </div>
         </a>
       </div>
