@@ -2,7 +2,7 @@ import React from 'react'
 
 function Music() {
   return (
-    <div className='container'>
+    <div className='portfolio-ctn'>
       <h1>Music</h1>
       <div className='container'>
         <iframe
