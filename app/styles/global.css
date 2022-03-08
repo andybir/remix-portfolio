@@ -66,6 +66,12 @@ p {
   justify-content: center;
   max-height: 100%;
 }
+.music-card {
+  padding: 15px;
+  align-items: center;
+  justify-content: center;
+  max-height: 100%;
+}
 
 .project-info {
   display: flex;
