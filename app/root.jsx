@@ -48,7 +48,7 @@ function Document({ children, title }) {
 function Layout({ children }) {
   return (
     <>
-      <nav className='navbar'>
+      {/* <nav className='top-nav'>
         <Link to='/portfolio' className='nav-item'>
           Portfolio
         </Link>
@@ -64,7 +64,30 @@ function Layout({ children }) {
         <Link to='/contact' className='nav-item'>
           Contact
         </Link>
-      </nav>
+      </nav> */}
+      <section className='top-nav'>
+        <div className='logo'>Andy Birosak</div>
+        <input id='menu-toggle' type='checkbox' />
+        <label className='menu-button-container' for='menu-toggle'>
+          <div className='menu-button'></div>
+        </label>
+        <ul className='menu'>
+          <li>
+            <Link className='nav-item' to='/portfolio'>
+              Portfolio
+            </Link>
+          </li>
+          <li>
+            <Link to='/music'>Music</Link>
+          </li>
+          <li>
+            <Link to='/about'>About</Link>
+          </li>
+          <li>
+            <Link to='/contact'>Contact</Link>
+          </li>
+        </ul>
+      </section>
       <div className='container'>{children}</div>
     </>
   )

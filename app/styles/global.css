@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
 
 * {
-  background-color: #e16340;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -10,16 +9,16 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  background-color: #e16340;
+
 }
 
 h1 {
-  /* font-family: 'Poppins', sans-serif; */
   font-family: 'Marcellus', serif;
 }
 
 li {
   font-family: 'Poppins', sans-serif;
-  /* font-family: 'Marcellus', serif; */
 }
 
 a {
@@ -31,9 +30,9 @@ a:visited {
   color: #000;
 }
 
-ul {
+/* ul {
   list-style: none;
-}
+} */
 
 p {
   margin: 10px 0;
@@ -54,11 +53,10 @@ p {
 .portfolio-ctn {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   width: 100%;
   height: 80vh;
-  /* max-height: 100%; */
+  max-height: 100%;
   max-width: 960px;
   margin: auto;
   padding: 0 30px;
@@ -73,10 +71,16 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+}
+
+img {
+  width: 90%;
 }
 
 .logo {
   font-size: x-large;
+  color: #000;
 }
 
 .navbar {
@@ -92,25 +96,25 @@ p {
   font-family: 'Poppins', sans-serif;
 }
 
-.navbar ul {
+/* .navbar ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
+} */
 
-.navbar li {
+/* .navbar li {
   margin-left: 20px;
-}
+} */
 
-.navbar ul li a {
+/* .navbar ul li a {
   font-size: 14px;
   font-weight: bold;
-}
+} */
 
-.navbar ul li a:hover {
+/* .navbar ul li a:hover {
   color: #fff;
   border-bottom: 1px solid #fff;
-}
+} */
 
 .btn {
   display: inline-block;
@@ -204,7 +208,7 @@ i {
   font-size: 30px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   .project-card {
     display: flex;
     flex-direction: column;
@@ -213,6 +217,156 @@ i {
   }
 
   img {
-    width: 450px;
+    width: 350px;
   }
+}
+
+/* Hamburger Menu */
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: #00BAF0;
+  background: linear-gradient(to left, #f46b45, #eea849); */
+  background-color: #eea849;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #FFF;
+  height: 50px;
+  padding: 1em;
+  margin-bottom: 20px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > li a {
+  margin: 0 1rem;
+}
+
+.menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+  ul {
+    width: 100%;
+    background-color: #222;
+
+  }
+  
+  li {
+    display: inline;
+    /* border-bottom: 1px solid #fff; */
+
+  }
+  
+  a {
+    display: inline-block;
+    width: 100%;
+  }
+
+  a:visited {
+    outline: none;
+  }
+
+  .menu-button-container {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .menu li a {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    width: 100%;
+
+  }
+  #menu-toggle:checked ~ .menu li a {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .nav-item {
+    background-color: #fff;
+  }
+  .menu > li a {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: #e16340;
+    background-color: #222;
+  }
+  
+  .menu > li:not(:last-child) a:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+  
+  
+
 }
