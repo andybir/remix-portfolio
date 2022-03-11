@@ -78,13 +78,13 @@ function Layout({ children }) {
             </Link>
           </li>
           <li>
-            <Link to='/music'>Music</Link>
+            <Link className='nav-item' to='/music'>Music</Link>
           </li>
           <li>
-            <Link to='/about'>About</Link>
+            <Link className='nav-item' to='/about'>About</Link>
           </li>
           <li>
-            <Link to='/contact'>Contact</Link>
+            <Link className='nav-item' to='/contact'>Contact</Link>
           </li>
         </ul>
       </section>
