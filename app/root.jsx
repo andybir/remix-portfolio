@@ -66,7 +66,9 @@ function Layout({ children }) {
         </Link>
       </nav> */}
       <section className='top-nav'>
-        <div className='logo'>Andy Birosak</div>
+        <div className='logo'>
+          <Link to='/'>Andy Birosak</Link>
+        </div>
         <input id='menu-toggle' type='checkbox' />
         <label className='menu-button-container' for='menu-toggle'>
           <div className='menu-button'></div>
@@ -78,13 +80,19 @@ function Layout({ children }) {
             </Link>
           </li>
           <li>
-            <Link className='nav-item' to='/music'>Music</Link>
+            <Link className='nav-item' to='/music'>
+              Music
+            </Link>
           </li>
           <li>
-            <Link className='nav-item' to='/about'>About</Link>
+            <Link className='nav-item' to='/about'>
+              About
+            </Link>
           </li>
           <li>
-            <Link className='nav-item' to='/contact'>Contact</Link>
+            <Link className='nav-item' to='/contact'>
+              Contact
+            </Link>
           </li>
         </ul>
       </section>
