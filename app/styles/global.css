@@ -9,7 +9,8 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #e16340;
+  background-color: #021d03;
+  color: #fff;
 
 }
 
@@ -23,11 +24,11 @@ li {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 
 a:visited {
-  color: #000;
+  color: #fff;
 }
 
 /* ul {
@@ -95,7 +96,7 @@ img {
 
 .logo {
   font-size: x-large;
-  color: #000;
+  color: #fff;
   font-family: 'Marcellus', serif;
 
 }
@@ -248,7 +249,7 @@ i {
   justify-content: space-between;
   /* background-color: #00BAF0;
   background: linear-gradient(to left, #f46b45, #eea849); */
-  background-color: #eea849;
+  background-color: #021d03;
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #FFF;
   height: 50px;
@@ -286,7 +287,7 @@ i {
 .menu-button::before,
 .menu-button::after {
   display: block;
-  background-color: #000;
+  background-color: #fff;
   position: absolute;
   height: 4px;
   width: 30px;
@@ -375,8 +376,8 @@ i {
     margin: 0;
     padding: 0.5em 0;
     width: 100%;
-    color: #e16340;
-    background-color: #222;
+    color: #021d03;
+    background-color: #fff;
   }
   
   .menu > li:not(:last-child) a:not(:last-child) {
